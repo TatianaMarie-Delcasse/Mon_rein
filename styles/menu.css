@@ -1,0 +1,454 @@
+/* Reset global */
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#main-content {
+  display: none; /* on le masque au chargement */
+}
+/* Supprime les marges pour le popup uniquement */
+#result-screen,
+#result-screen * {
+  margin: 0 !important;
+}
+
+/* Structure de base */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #edede9;
+  color: #4a536b;
+  min-height: 100vh;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Désactive le scroll quand popup ouverte */
+body.noscroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+/* Floute ou masque le fond quand popup ouverte */
+#main-content.dimmed {
+  visibility: hidden; /* ou filter: blur(4px); */
+  pointer-events: none;
+}
+
+/* Bouton retour */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #d5bdaf;
+  color: #4a536b;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background-color: #d5bdaf;
+}
+
+/* Conteneur principal */
+.container {
+  text-align: center;
+  padding: 40px;
+  overflow: hidden;
+}
+
+/* Titre */
+h1 {
+  margin-top: 40px;
+  margin-bottom: 25px;
+  color: #4a536b;
+  text-align: center;
+}
+
+#game-explanation {
+  background-color: #e3d5ca;
+  border: 1px solid #e0dcd2;
+  border-radius: 12px;
+  padding: 40px 50px; /* plus de padding */
+  margin: 0 auto 40px auto;
+  max-width: 1000px; /* agrandir la largeur */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  font-size: 18px; 
+}
+
+/* Titres */
+h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #4a536b;
+}
+
+/* Question */
+#question {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Choix des boutons */
+#choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#choices button {
+  background-color: #d5bdaf;
+  border: 2px solid transparent;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #4a536b;
+}
+
+#choices button:hover {
+  transform: translateY(-3px);
+}
+
+/* Résultat final */
+#score-screen {
+  display: none;
+  font-size: 20px;
+}
+
+/* Popup overlay */
+#result-screen {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Popup centrée */
+#result-screen .popup-content {
+  background-color: #ffffff;
+  padding: 60px;
+  border-radius: 16px;
+  max-width: 600px;
+  max-height: 80vh;
+  width: 100%;
+  text-align: center;
+  overflow-y: auto;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Détail des résultats */
+#result-details {
+  margin-bottom: 30px;
+}
+
+/* Bouton suivant */
+#next-btn {
+  background-color: #d5bdaf;
+  color: #4a536b;
+  border: none;
+  padding: 14px 30px;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#next-btn:hover {
+  background-color: #d5bdaf;
+}
+
+/* Cache les sections */
+.hidden {
+  display: none;
+}
+
+.result-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 60px; 
+}
+
+.result-choices {
+  text-align: left;
+  margin-bottom: 40px; 
+}
+
+.result-block {
+  margin-bottom: 30px;  
+  line-height: 1.8;    
+}
+
+.result-item {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.result-explanation {
+  margin: 10px 0 0 0;  
+  font-style: italic;
+  color: #4a536b;
+}
+
+.result-score {
+  margin-top: 50px;     
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#next-btn {
+  margin-top: 20px;
+  background-color: #d5bdaf;
+  color: #4a536b;
+  border: none;
+  padding: 16px 36px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+#next-btn:hover {
+  background-color: #cbb09e;
+}
+
+
+
+.result-score {
+  margin-top: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#main-content.dimmed {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.menu-section {
+  margin-bottom: 30px;
+}
+
+.choices-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#validate-btn {
+  background-color: #d5bdaf;
+  color: #4a536b;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  margin-top: 30px;
+}
+
+#validate-btn:hover {
+  background-color: #d5bdaf;
+}
+
+#validate-btn:disabled {
+  background-color: #e0dcd2;
+  cursor: not-allowed;
+}
+
+#menu-questions {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px auto;
+  flex-wrap: wrap;
+}
+
+.menu-section {
+  flex: 1;
+  min-width: 320px;       
+  max-width: 420px;          
+  background-color: #e3d5ca;
+  border: 1px solid #e0dcd2;
+  border-radius: 16px;
+  padding: 40px;            
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  font-size: 22px;  
+}
+
+.question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.choices-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.choice-button {
+  display: block;
+  width: 100%;
+  padding: 18px 24px;
+  margin: 12px 0;
+  font-size: 20px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background-color: #EDEDE9;
+  color: #4a536b;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.choice-button:hover {
+  background-color: #f1ece6;
+}
+
+.choice-button.selected {
+  background-color: #d5bdaf;
+  color: #4a536b;
+  font-weight: bold;
+  border: 2px solid #d5bdaf;
+}
+
+#game-explanation p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.intro-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../photos/conseil/FondParcours.png');
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: top left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.game-introduction {
+  background-color: #f5ebe0;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 700px;
+  width: 90%;
+  font-size: 18px;
+}
+
+#start-menu-btn {
+  margin-top: 30px;
+  padding: 14px 32px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #d5bdaf;
+  color: #4a536b;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+#start-menu-btn:hover {
+  background-color: #cbb09e;
+}
+
+#final-popup {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-image: url('../photos/conseil/FondParcours.png');
+}
+
+#final-popup .popup-content {
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 30px;         
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+
+  min-width: 300px;
+  max-width: 500px;      
+  min-height: auto;      
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;  
+}
+
+#final-message {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#final-total {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#see-correction-btn {
+  align-self: center;
+  background-color: #d5bdaf;
+  color: #4a536b;
+  border: none;
+  padding: 14px 32px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: auto;
+  text-decoration: none;
+}
+
+#see-correction-btn:hover {
+  background-color: #c9b2a3;
+}
+

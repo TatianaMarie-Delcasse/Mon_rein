@@ -1,0 +1,442 @@
+/* Reset général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: top left;
+    background: #EDEDE9;
+}
+
+/* En-tête */
+.header-top {
+    padding: 30px 20px 10px;
+    text-align: center;
+    background: #e3d5ca;
+    color: #4a536b;
+}
+
+.header-top h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #4a536b;
+}
+
+/* Conteneur principal */
+.content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f0e9e0;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    color: #2d3142;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Titres */
+.content h3 {
+    font-size: 18px;
+    color: #1d3557;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.content h2 {
+    font-size: 16px;
+    color: #1d3557;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Transition pour les paragraphes */
+.transition-paragraph {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #2d3142;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 6px solid #d5bdaf;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: justify;
+}
+
+/* Schéma du rein */
+.schema-rein {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.schema-rein h3 {
+    font-size: 22px;
+    color: #264653;
+    margin-bottom: 20px;
+}
+
+.img-rein {
+    max-width: 80%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-rein:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); 
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+.access-card {
+    background-color: #e6f2ff;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    width: 270px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.access-card:hover {
+    transform: scale(1.05);
+}
+
+.card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Modale */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border-radius: 16px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    font-family: "Segoe UI", sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.modal-content h2, .modal-content h3 {
+    color: #4d3910;
+    margin-bottom: 10px;
+}
+
+.modal-content ul {
+    margin-left: 20px;
+    padding-left: 15px;
+    list-style: disc;
+}
+
+.modal-content p {
+    margin-bottom: 15px;
+}
+
+.modal-image {
+    margin-top: 25px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+.img-don {
+    display: block;
+    margin: 0 auto;
+    max-width: 20%; 
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cartes des causes */
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr)); 
+    gap: 50px; 
+    margin: 20px auto 30px;
+    width: fit-content; 
+}
+
+
+/* Style des cartes */
+.activity-card {
+    width: 250px;
+    background: #f5ebe0;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.activity-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.activity-card img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px; /* ou 0 si tu ne veux plus l'effet rond */
+    margin-bottom: 15px;
+}
+
+
+.activity-card p {
+    font-size: 16px;
+    color: #264653;
+    margin: 0;
+}
+
+/* Couleurs de fond des cartes */
+.activity-border-green-lime {
+    border: 2px solid #80b918;
+    background-color: #f3fae3;
+}
+
+.activity-border-blue-electric {
+    border: 2px solid #948761;
+    background-color: #f8f0e0;
+}
+
+.activity-border-red-coral {
+    border: 2px solid #e63946;
+    background-color: #ffecec;
+}
+
+.activity-border-purple-bright {
+  border: 2px solid #9d4edd;
+  background-color: #f3e9fd;
+}
+
+.activity-border-orange-bold {
+  border: 2px solid #f77f00;
+  background-color: #fff3e0;
+}
+
+.activity-border-yellow-safran {
+  border: 2px solid #f9c74f;
+  background-color: #fffbe0;
+}
+.flip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 350px); /* 2 colonnes au lieu de 3 pour plus de place */
+  justify-content: center;
+  gap: 40px 60px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  perspective: 1000px;
+}
+
+.flip-card {
+  width: 350px; /* plus large */
+  height: 600px; /* plus haut */
+  background: transparent;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  perspective: 1000px;
+  border: 3px solid transparent;
+}
+
+
+/* Partie interne de la carte */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 12px; 
+}
+
+/* Au survol, la carte pivote */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Les faces avant et arrière de la carte */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+
+/* Verso de la carte */
+.flip-card-back {
+  color: #264653;
+  transform: rotateY(180deg);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  user-select: none;
+  background: transparent; 
+}
+
+.activity-grid-bilan {
+  display: grid;
+  grid-template-columns: repeat(3, 220px); 
+  justify-content: center;
+  gap: 30px 60px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+/* 👉 Centrer UNIQUEMENT la 7ᵉ (dernière) carte sous la colonne du milieu */
+.activity-grid-bilan .activity-card:last-child {
+  grid-column: 2;      /* se place dans la colonne 2/3 */
+}
+
+
+/* Partie technique chirurgicale */
+
+.technique-section {
+  background-image: url('../photos/dialyse/fond.jpg'); /* ton image de fond */
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  position: relative;
+}
+
+.overlay-content {
+  background-color: rgba(255, 255, 255, 0.85); /* calque blanc transparent */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  gap: 40px;
+  flex-wrap: wrap; /* pour le responsive */
+}
+
+.text-side {
+  flex: 1;
+  min-width: 280px;
+}
+
+.text-side h3 {
+  margin-bottom: 20px;
+  color: #264653;
+}
+
+.text-side p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #264653;
+}
+
+.image-side {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.image-side img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.teaser-button {
+    display: inline-block;
+    font-size: 20px;
+    color: #4a536b;
+    border: 2px solid #aa8875;
+    background-color: #d5bdaf; 
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.teaser-button:hover {
+    transform: scale(1.05);  
+}

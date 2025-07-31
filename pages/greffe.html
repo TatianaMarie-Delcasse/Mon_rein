@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Greffe Rénale</title>
+    <link rel="stylesheet" href="../styles/barre-navigation.css">
+    <link rel="stylesheet" href="../styles/greffe.css"> 
+</head>
+
+<body>
+
+    <div class="header-top">
+        <h1>Qu’est-ce que la greffe rénale ?</h1>
+        <br>
+        <p>Comprenez pourquoi cela est utile et comment cela fonctionne.</p>
+        <br>
+    </div>
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="content">
+
+        <h3>Qu’est-ce que le don d’organe ?</h3>
+        <p class="transition-paragraph">
+            Le don d'organes et de tissus est un acte de générosité et de solidarité entièrement gratuit.
+         <br>  
+            En France, la majorité des greffes rénales sont réalisées à partir de personnes décédées, bien que le don d’un vivant soit également possible.
+            Toute l’activité de transplantation, qu’il s’agisse de donneurs vivants ou décédés, est strictement encadrée par la loi et par l’Agence de la biomédecine.
+
+        </p>
+        <br><br>
+
+        <p class="transition-paragraph">
+            <strong>Le cadre légal : la présomption de consentement</strong>
+            <br><br>
+           En France, la loi repose sur le principe du consentement présumé :
+            <br>
+                  &emsp;&emsp;"Toute personne est considérée comme donneuse d’organes, sauf si elle a exprimé son refus de son vivant."
+            <br><br>
+            Ce refus peut être exprimé de deux manières :
+            <br>
+                &emsp;&emsp;- En faisant acter son opposition en s'inscrivant au Registre National de refus.
+                <br>
+                &emsp;&emsp;- En exprimant son opposition oralement auprès de ses proches .
+
+            <br><br>
+            En l’absence d’opposition, les organes ou tissus peuvent être prélevés après le décès.
+        </p>
+
+        <br>
+        <h3>L'intêret d'une greffe rénale </h3>
+        <img src="../photos/dialyse/carte_greffe.png" alt="Carte mentale greffe" class="img-rein" />
+
+        <br><br>
+        <h3>La greffe de rein : pour qui et à quels risques ?</h3>
+        
+        <div class="card-container">
+            <div class="access-card" onclick="openModal('modalbenef')">
+                <h4>Qui peut bénéficier d'une greffe de rein ?</h4>
+            </div>
+
+            <div class="access-card" onclick="openModal('modalrisque')">
+                <h4>Quels sont les risques d'une greffe de rein ? </h4>
+            </div>
+        </div>
+
+        <br>
+
+        <h3>Qu’est ce que le don d’organe à partir de donneur vivant ?</h3>
+        <p class="transition-paragraph">
+            <strong>L’être humain peut vivre en bonne santé avec un seul rein.</strong> C’est sur ce principe que repose le don de rein à partir d’un donneur vivant.
+            <br><br>
+            <img src="../photos/dialyse/don.jpg" alt="don greffe" class="img-don" />
+            <br>  
+            Le don vivant consiste à ce qu’un proche (souvent un membre de la famille ou un ami) donne l’un de ses deux reins pour vous permettre d’être greffé. 
+            <br>
+            Ce don est strictement encadré par la loi et nécessite <strong>une évaluation médicale et psychologique rigoureuse pour le donneur et le receveur.</strong>
+           <br><br>
+            Les conditions médicales à réunir sont très strictes : le candidat au don fait l’objet d’un bilan médical complet comportant des examens cliniques, radiologiques et biologiques. On vérifie notamment s’il peut subir une intervention chirurgicale sans risque et s’il est porteur ou non de certaines maladies transmissibles. 
+            <br>
+            Après son don, il bénéficiera ensuite d’un suivi annuel de sa fonction rénale.
+        </p>
+        <br>
+        <h3>Qui peut faire un don vivant ?</h3>
+        <h2>Le donneur doit avoir un lien de sang ou affectif avec le receveur : </h2>
+
+        <div class="activity-grid">
+            <div class="activity-card activity-border-blue-electric">
+                <img src="../photos/dialyse/epouse.jpeg" alt="epouse" />
+                <br><p>Épouse</p>
+            </div>
+            
+            <div class="activity-card activity-border-blue-electric">
+                <img src="../photos/dialyse/mari.jpeg" alt="mari" />
+                <br><p>Mari</p>
+            </div>
+            <div class="activity-card activity-border-blue-electric">
+                <br><img src="../photos/dialyse/famille.jpeg" alt="famille" />
+                <br><p>Famille</p>
+            </div>
+            <div class="activity-card activity-border-blue-electric">
+                <br><img src="../photos/dialyse/ami.jpg" alt="ami" />
+                <br><p>Amis proches (ayant un lien affectif étroit et stable depuis un minimum de 2 ans)</p>
+            </div>
+
+        </div>
+        <br>
+
+        <section class="section-trucs">
+            <h3>Les avantages et inconvénients du don vivant :</h3>
+            <div class="flip-grid">
+    
+                <!-- Carte Avantages -->
+                <div class="flip-card">
+                <div class="flip-card-inner activity-border-green-lime">
+                    <div class="flip-card-front">
+                    Les avantages du don vivant
+                    </div>
+                    <div class="flip-card-back">
+                    <ul>
+                        <strong>1- Meilleurs résultats à long terme :</strong> 
+                        <br>Les greffes à partir d’un donneur vivant fonctionnent souvent plus longtemps et mieux que celles provenant d’un donneur décédé (environ 3/4 des greffons prélevés sur donneur vivant sont encore fonctionnels 10 ans après la greffe).
+                        <br><br>
+                        <strong>2- Programmation de la greffe :</strong> 
+                        <br>Elle peut être planifiée, ce qui évite l’attente parfois longue sur la liste de greffe.
+                        <br><br>
+                        <strong>3- Moins de temps en dialyse (ou pas du tout) :</strong> 
+                        <br>Cela peut améliorer la qualité de vie et réduire certaines complications liées à la dialyse. Pour certains malades, du fait de la rareté de leur groupe sanguin ou de la présence d’anticorps (transfusions, grossesses ou greffes antérieures), la greffe à partir de donneur vivant peut être la seule possibilité dans un délai raisonnable.
+                        <br><br>
+                        <strong>4- Greffe préemptive possible :</strong> 
+                        <br>Elle peut avoir lieu avant même que la dialyse ne commence, ce qui est bénéfique pour la santé globale.
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Carte Inconvénients -->
+                <div class="flip-card">
+                <div class="flip-card-inner activity-border-red-coral">
+                    <div class="flip-card-front">
+                    Les inconvénients ou limites du don vivant
+                    </div>
+                    <div class="flip-card-back">
+                    <ul>
+                        <strong>1- Risque pour le donneur :</strong> 
+                        <br>Même si le don est généralement sûr, toute chirurgie comporte des risques (infections, douleurs, complications rares).
+                        <br><br>
+                        <strong>2- Charge émotionnelle :</strong> 
+                        <br>Cela peut créer une pression psychologique ou des tensions dans la relation donneur-receveur.
+                        <br><br>
+                        <strong>3- Incompatibilité possible :</strong> 
+                        <br>Le donneur doit être médicalement compatible (groupe sanguin, système immunitaire). La recherche de la meilleure compatibilité est essentielle.
+                        <br><br>
+                        <strong>4- Processus long et encadré :</strong> 
+                        <br>L’évaluation peut prendre du temps, avec des examens nombreux pour garantir la sécurité du don.
+                    </ul>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+        </section>
+
+        <br><br>
+        <img src="../photos/dialyse/don_croise.png" alt="Carte mentale greffe" class="img-rein" />
+
+        <br><br>
+        <h3>Le bilan pré-greffe</h3>
+        <p class="transition-paragraph">
+            Ce parcours parfois perçu comme long et fastidieux, est indispensable avant d’aboutir à l’inscription en liste d’attente de greffe ou à la planification d’une greffe avec un donneur vivant.
+        </p>
+        <h2>Les diiférents bilan a réaliser : </h2>
+
+        <div class="activity-grid-bilan">
+            <div class="activity-card activity-border-green-lime">
+              <img src="../photos/dialyse/bilan_vasculaire.webp" alt="Bilan vasculaire" />
+              <p>Bilan vasculaire et urologique</p>
+            </div>
+            <div class="activity-card activity-border-blue-electric">
+              <img src="../photos/dialyse/bilan_pulmo.jpeg" alt="Bilan pulmonaire" />
+              <p>Bilan pulmonaire</p>
+            </div>
+            <div class="activity-card activity-border-yellow-safran">
+              <img src="../photos/dialyse/bilan_radio.jpg" alt="Bilan radiologique et échographique" />
+              <p>Bilan radiologique et échographique</p>
+            </div>
+            <div class="activity-card activity-border-red-coral">
+              <img src="../photos/dialyse/bilan_cardiologique.jpg" alt="Bilan cardiologique" />
+              <p>Bilan cardiologique</p>
+            </div>
+            <div class="activity-card activity-border-orange-bold">
+              <img src="../photos/dialyse/bilan_dermato.jpg" alt="Bilan dermatologique" />
+              <p>Bilan dermatologique</p>
+            </div>
+            <div class="activity-card activity-border-yellow-safran">
+              <img src="../photos/dialyse/bilan_sang.jpeg" alt="Bilans sanguins" />
+              <p>Bilans sanguins</p>
+            </div>
+            <div class="activity-card activity-border-purple-bright">
+              <img src="../photos/dialyse/bilan_dent.jpg" alt="Bilan dentaire" />
+              <p>Bilan dentaire</p>
+            </div>
+        </div>
+
+        <br><br>
+        <h3>L’inscription sur liste d’attente</h3>
+        <p class="transition-paragraph">
+            L’inscription a lieu après le bilan pré-greffe, adapté à l’état de santé du patient. Ce bilan est réalisé par le néphrologue traitant en lien avec le centre de transplantation choisi.
+            <br><br>
+            Celui-ci, au cours de la consultation pré greffe, synthétise le dossier et adresse le patient au chirurgien urologique et à l’anesthésiste qui effectueront la transplantation. 
+            <br><br>
+            C’est en concertation pluridisciplinaire que la candidature du patient est acceptée.
+            <br>
+            Si elle est favorable, le coordinateur de transplantation envoie les informations à l’Agence de la biomédecine, où le patient est inscrit sous un numéro anonyme (numéro Cristal). Une lettre de confirmation est ensuite envoyée au patient.
+            <br><br>
+            L’attribution d’un greffon se fait selon un barème de points et la compatibilité avec le donneur.
+        </p>
+
+        <br><br>
+
+        <section class="technique-section">
+            <div class="overlay-content">
+                <div class="text-side">
+                <h3>La technique chirurgicale</h3>
+                <p>L’ablation du ou des reins est rarement nécessaire avant la greffe.</p>
+                <p>Elle est indiquée quand le rein a été ou est le siège d’infections récidivantes, de calculs, de kystes infectés ou de tumeur.</p>
+                <p>Le rein est placé dans le bas de l'abdomen, à droite ou à gauche.</p>
+                <p>On réalise une reconnexion (anastomose) des vaisseaux sanguins principaux du rein (artère et veine rénales) à la veine et à l'artère iliaques du receveur.</p>
+                <p>On re-connecte également l'uretère du rein greffé à la vessie du receveur.</p>
+                </div>
+                <div class="image-side">
+                <img src="../photos/dialyse/schema_greffe.png" alt="Schéma de la greffe rénale" />
+                </div>
+            </div>
+        </section>
+
+        <br><br><br><h3>Vous vous sentez prêt à tester vos connaissances ?</h3>
+
+        <a href="jeux2.html" class="teaser-button">Relevez le défi ici !</a>
+
+    </div>
+
+    <script src="../scripts/barre-navigation.js"></script>
+
+    <!-- Modale FAV -->
+    <div id="modalbenef" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalbenef')">&times;</span>
+        <img src="../photos/dialyse/greffe_benef.png" alt="Schéma fistule artério-veineuse" class="modal-image">
+    </div>
+    </div>
+
+
+        <!-- Modale Cathéter -->
+    <div id="modalrisque" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalrisque')">&times;</span>
+        <img src="../photos/dialyse/greffe_risques.png" alt="Schéma cathéter veineux" class="modal-image">
+    </div>
+    </div>
+
+
+    <!-- Script pour gérer les modales -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = "block";
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

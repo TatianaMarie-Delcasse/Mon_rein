@@ -1,0 +1,472 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #EDEDE9;
+  color: #4a536b;
+
+}
+
+
+header {
+  background-color: #BDA18A;
+  color: white;
+  padding: 20px;
+}
+
+header p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #4a536b;
+}
+
+ul {
+  list-style: none;
+  margin: 10px 0;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+.ingredients-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.ingredient {
+  width: 150px;
+  height: 80px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: 1px solid #d5bdaf;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  transition: transform 0.2s ease;
+}
+
+.ingredient:hover {
+  background-color: #f5f0ec;
+  transform: scale(1.03);
+}
+
+.ingredient img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.ingredient-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.plate-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.plate {
+  width: 300px;
+  height: 250px;
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  border-radius: 12px;
+  border: 3px dashed #BDA18A;
+}
+
+.plate h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #4a536b;
+}
+
+.plate p {
+  color: #7c7c7c;
+  font-size: 14px;
+  text-align: center;
+}
+
+.plate.dragover {
+  background-color: #f9f5f2;
+}
+
+.plate-image {
+  width: 200px;
+  display: block;
+  margin: 10px auto;
+}
+
+.category-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.category-column h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #4a536b;
+  border-bottom: 2px solid #d5bdaf;
+  padding-bottom: 5px;
+}
+
+#patient-plate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  min-height: 200px;
+  max-width: 90%;
+  margin: 30px auto;
+}
+
+#patient-plate .ingredient {
+  width: 90px;
+  height: 90px;
+  background-color: #fff;
+}
+
+#patient-plate .ingredient:hover {
+  transform: scale(1.05);
+}
+
+.feedback {
+  margin-top: 30px;
+  padding: 15px;
+  text-align: left;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #EDEDE9;
+  
+}
+
+#check-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 18px; 
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #BDA18A;
+  color: #4a536b;
+  border: none;
+  cursor: pointer;
+  z-index: 1000; 
+}
+
+
+#check-btn:hover {
+  background-color: #a58a70;
+}
+
+.button-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; 
+}
+
+.suivant-btn {
+  padding: 10px 20px;
+  font-size: 18px; 
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #BDA18A;
+  color: #4a536b;
+  border: none;
+  cursor: pointer;
+}
+
+
+.suivant-btn:hover {
+  background-color: #a58a70;
+}
+
+.step {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.step.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Style pour la consigne (game-introduction) */
+.game-introduction {
+  background-color: #f0e9e0;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto; 
+}
+
+
+.game-introduction h1 {
+  color: #4a536b;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.game-introduction p {
+  color: #4a536b;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Style du bouton "Commencer le quiz" */
+#start-assiette-btn {
+  background-color: #d5bdaf;
+  color: #4a536b;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 50px;
+}
+
+#start-assiette-btn {
+  background-color: #d5bdaf;
+}
+
+
+.step {
+  display: none;
+}
+
+.plate-container {
+  display: none;
+}
+
+.intro-wrapper {
+  position: fixed;             
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: flex-start;   
+  align-items: center;          
+
+  /*padding-left: 15vw; */
+  background-image: url('../photos/conseil/FondParcours.png');    
+  z-index: 1000;                 
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #4a536b;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: none;
+  pointer-events: none;
+  z-index: 1000;
+  white-space: nowrap;
+}
+
+.category-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.category-column h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #4a536b;
+  border-bottom: 2px solid #d5bdaf;
+  padding-bottom: 5px;
+}
+
+
+.category-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-column .ingredient-list-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+#backButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  background-color: #d5bdaf;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #4a536b;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6); 
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+}
+
+.section-resultats {
+  margin-bottom: 20px;
+}
+
+.score {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  color: #4a536b;
+  font-family: 'Arial', sans-serif;
+}
+
+.popup-content h2 {
+  color: #BDA18A;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.popup-content .score {
+  font-size: 16px;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.info-message {
+  background-color: #f9f6f3;
+  border-left: 5px solid #BDA18A;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.info-message h3 {
+  margin-top: 0;
+  color: #BDA18A;
+  font-size: 20px;
+}
+
+.info-message p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.btn-fiche {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #d5bdaf;
+  color: #4a536b;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 20px;
+}
+
+
+
+.hidden {
+  display: none !important;
+}

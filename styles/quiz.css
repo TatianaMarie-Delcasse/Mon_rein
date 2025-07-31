@@ -1,0 +1,259 @@
+/* Reset général */
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style du body avec un fond doux */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('../photos/conseil/FondParcours.png');
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: top left;
+  text-align: center;
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;     
+  align-items: flex-start;    
+  flex-direction: column;
+
+  padding: 60px 20px 100px;    
+  overflow-y: auto;
+}
+
+
+
+/* Style pour la consigne (game-introduction) */
+.game-introduction {
+  background-color: #f0e9e0;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto; 
+}
+
+
+.game-introduction h1 {
+  color: #4a536b;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.game-introduction p {
+  color: #4a536b;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#start-quiz-btn {
+  background-color: #d5bdaf;
+  color: #4a536b;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 50px;
+}
+
+#start-quiz-btn:hover {
+  background-color: #d5bdaf;
+}
+
+/* Conteneur du quiz, caché par défaut */
+.quiz-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f0e9e0;
+  color: #4a536b;
+  width: 100%;
+  max-width: 750px;
+  margin-top: 30px; 
+}
+
+/* Conteneur du quiz, caché par défaut */
+.game-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f0e9e0;
+  color: #4a536b;
+  width: 100%;
+  max-width: 750px;
+  margin-top: 30px; 
+}
+
+/* Boutons de réponse */
+button {
+  display: block;
+  margin: 15px auto;
+  padding: 12px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #e3d5ca; 
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+  color: #4a536b;
+  width: 70%; 
+}
+
+button:hover {
+  background-color: #e3d5ca; 
+  transform: scale(1.05);  
+}
+
+button.correct {
+  background-color: #4CAF50; 
+  color: white;
+}
+
+button.wrong {
+  background-color: #F44336; 
+  color: white;
+}
+
+/* Effet de survol spécifique pour les boutons */
+button:hover {
+  background-color: #e3d5ca;
+  transform: scale(1.05); 
+}
+
+/* Masquer les éléments cachés */
+.hidden {
+  display: none;
+}
+
+/* Style du score */
+#score {
+  background-color: #e3d5ca; 
+  padding: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: black;
+}
+
+#score button {
+  background-color: #d5bdaf;
+  color: #4a536b;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 30px;
+}
+
+#score button:hover {
+  background-color: #d5bdaf;
+}
+
+
+/* Style pour les explications */
+p {
+  font-size: 16px;
+  color: #4a536b;
+  margin-top: 10px;
+}
+
+/* Style du bouton de retour */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #d5bdaf;
+  color: #4a536b;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #d5bdaf;
+}
+
+
+
+button.no-hover {
+  background-color: #e3d5ca; 
+  transform: none; 
+  pointer-events: none; 
+}
+
+button.correct {
+  background-color: #4CAF50; 
+}
+
+button.wrong {
+  background-color: #F44336; 
+}
+
+/* Effet au survol uniquement quand les réponses ne sont pas données */
+button:hover:not(.no-hover) {
+  background-color: #e3d5ca;
+  transform: scale(1.05); 
+}
+
+/* Style du conteneur de la question */
+.question-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 20px;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.question-image {
+  width: 300px;       
+  height: auto;
+  border-radius: 16px;
+  flex-shrink: 0;     
+}
+
+
+.question-text {
+  font-size: 1.2rem;
+  color: #4a536b;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* Conteneur des réponses */
+#answers {
+  display: flex;
+  flex-direction: column; 
+  margin-top: 20px;
+  text-align: center;
+}

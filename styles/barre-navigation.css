@@ -1,0 +1,44 @@
+.navbar {
+    background-color: #d5bdaf;
+    padding: 10px 0;
+    overflow-x: auto;         /* Scroll horizontal si nécessaire */
+    white-space: nowrap;      
+    -ms-overflow-style: none; 
+    scrollbar-width: none;    
+}
+
+/* Cache la scrollbar sur WebKit (Chrome, Safari, etc.) */
+.navbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ligne contenant tous les liens */
+.nav-ligne {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 0 10px;
+}
+
+/* Liens de navigation */
+.navbar a {
+    color: #4a536b;
+    padding: 10px 16px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 15px;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold; 
+}
+
+
+/* Effet au survol ET lien actif */
+.navbar a:hover,
+.navbar a.active {
+    background-color: #e3d5ca;
+    transform: scale(1.05); 
+}

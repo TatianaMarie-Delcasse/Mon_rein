@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../photos/conseil/FondParcours.png');
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: top left;
+}
+
+.container {
+    position: relative; 
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f5ebe0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #4a536b;
+}
+
+p {
+    text-align: center;
+}
+
+.game {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.column h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #4a536b;
+}
+
+.item {
+    border: 2px solid #BDA18A;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.item2 {
+    border: 2px solid #BDA18A;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 0.3s;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.item:hover {
+    background-color: #ecf6f7;
+}
+
+button {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #d5bdaf;
+    color: #4a536b;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d5bdaf;
+}
+
+#result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.selected {
+    border: 2px dashed #d5bdaf;
+    background-color: #fdf2e9;
+}
+
+.matched {
+    cursor: default;
+    opacity: 0.8;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.part2 {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Modale mise à jour */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 70%;
+    max-width: 600px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease-out;
+}
+
+.modal-content img {
+    float: left;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    max-width: 80px;
+    height: auto;
+    border-radius: 8px;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+#modalText {
+    margin-top: 20px;
+    white-space: pre-wrap;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4a536b;
+}
+
+/* Nouveau style pour les messages d'erreur */
+.erreur-item {
+    background-color: #edede9; 
+    padding: 12px 20px;
+    margin-bottom: 16px;
+    margin-top: 3px; 
+    border-radius: 10px;
+    font-size: 16px;
+    color: #721c24; 
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.erreur-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.erreur-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #444;
+    text-align: justify;
+}
+
+.erreur-item .emoji {
+    font-size: 22px;
+    margin-right: 8px;
+    color: #721c24;
+}
+
+/* Bouton Next Part */
+#nextPart {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; 
+    padding: 10px 20px;
+    background-color: #d5bdaf;
+    color: #4a536b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+#nextPart:hover {
+    background-color: #d5bdaf;
+}
+
+#finishButton {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #d5bdaf;
+    color: #4a536b;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#finishButton:hover {
+    background-color: #d5bdaf;
+}
+
+
+
+.erreur-image {
+    float: left; 
+    margin-right: 10px; 
+}
+
+.erreur-image img {
+    max-width: 70px; 
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+#prevErrorButton,
+#nextErrorButton {
+    padding: 10px 20px;
+    background-color: #d5bdaf;
+    color: #4a536b;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error-buttons {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 20px;
+}
+
+#backButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    background-color: #d5bdaf;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: #4a536b;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+.score-final {
+    margin-top: 30px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #4a536b;
+    background-color: #f5ebe0;
+    padding: 16px 24px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+
+/* Style pour la consigne (game-introduction) */
+.game-introduction {
+    background-color: #f0e9e0;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto; /* CENTRE HORIZONTALEMENT */
+  }
+  
+  
+  .game-introduction h1 {
+    color: #4a536b;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .game-introduction p {
+    color: #4a536b;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* Style du bouton "Commencer le quiz" */
+  #start-liaison-btn {
+    background-color: #d5bdaf;
+    color: #4a536b;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 50px;
+  }
+  
+  #start-liaison-btn {
+    background-color: #d5bdaf;
+  }
+  
+  
+  .game {
+    display: none;
+  }
+
+  
+  .intro-wrapper {
+    position: fixed;               /* superposé à tout le reste */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  
+    display: flex;
+    justify-content: flex-start;   
+    align-items: center;           
+  
+    /*padding-left: 15vw;    */
+    background-image: url('../photos/conseil/FondParcours.png'); 
+    z-index: 1000;              
+  }
+
+  .back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #d5bdaf;
+    color: #4a536b;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #d5bdaf;
+  }

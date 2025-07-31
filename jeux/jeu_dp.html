@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ma Dialyse Interactive</title>
+  <link rel="stylesheet" href="../styles/quiz.css">
+</head>
+<body>
+  <a href="../pages/jeux2.html" class="back-button">← Retour au parcours</a>
+
+  <div class="game-introduction" id="game-introduction">
+    <h1>Bienvenue !</h1>
+    <p>Dans ce jeu, tu seras confronté·e à des situations de la vie quotidienne en lien avec la dialyse péritonéale.<br>
+    À chaque étape, choisis le bon réflexe parmi les propositions. Ensuite, découvre pourquoi cette réponse est la plus adaptée.
+   <br><br> Apprends à mieux gérer ta dialyse en t’amusant !
+  </p>
+    <button id="start-game-btn">Commencer le jeu</button>
+  </div>
+
+  <div class="game-container hidden" id="game-container">
+    <div id="scene-question"></div>
+    <div id="scene-actions"></div>
+    <div id="scene-feedback"></div>
+  </div>
+
+  <div id="score" class="hidden"></div>
+
+  <script src="../scripts/jeu_dp.js"></script>
+</body>
+</html>

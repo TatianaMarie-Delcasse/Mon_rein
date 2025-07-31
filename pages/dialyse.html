@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>La Dialyse</title>
+  <link rel="stylesheet" href="../styles/barre-navigation.css">
+  <link rel="stylesheet" href="../styles/dialyse.css">
+  <style>
+    /* === Style cartes cliquables avec image en fond === */
+    body {
+      font-family: Arial, sans-serif;
+      background: #EDEDE9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header-top {
+      padding: 30px 20px 10px;
+      text-align: center;
+      background: #e3d5ca;
+      color: #4a536b;
+    }
+
+    .header-top h1 {
+      font-size: 28px;
+      color: #4a536b;
+    }
+
+    .card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .full-card {
+      position: relative;
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .full-card:hover {
+      transform: scale(1.02);
+      cursor: pointer;
+    }
+
+    .card-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.85);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 30px;
+      text-align: center;
+    }
+
+    .card-overlay h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #1e1e1e;
+    }
+
+    .card-overlay p {
+      font-size: 16px;
+      color: #333;
+      max-width: 700px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Barre de navigation injectée dynamiquement -->
+  <script>
+    fetch("../components/barre-navigation.html")
+      .then(r => r.text())
+      .then(t => document.body.insertAdjacentHTML("afterbegin", t))
+      .catch(e => console.error("❌ Test fetch échoué :", e));
+  </script>
+
+  <!-- Titre + intro -->
+  <div class="header-top">
+    <h1>Comprendre la dialyse</h1>
+    <br>
+    <p>
+      Quand les reins ne fonctionnent plus correctement, la dialyse prend le relais pour éliminer les déchets et maintenir l’équilibre du corps.
+      <br>Découvrez les différentes formes de dialyse et les alternatives comme la greffe rénale.
+    </p>
+    <br>
+  </div>
+
+  <!-- Cartes cliquables -->
+  <section class="card-list">
+
+    <!-- Hémodialyse -->
+    <a href="hemodialyse.html" class="full-card" style="background-image: url('../photos/dialyse/hemodialyse.jpg');">
+      <div class="card-overlay">
+        <h3>Hémodialyse</h3>
+        <p>Le sang est filtré à l’aide d’une machine, généralement en centre 3 fois par semaine.</p>
+      </div>
+    </a>
+
+    <!-- Dialyse péritonéale -->
+    <a href="peritoneale.html" class="full-card" style="background-image: url('../photos/dialyse/peritoneale.webp');">
+      <div class="card-overlay">
+        <h3>Dialyse péritonéale</h3>
+        <p>Utilise la membrane de l’abdomen pour filtrer naturellement les déchets à domicile.</p>
+      </div>
+    </a>
+
+    <!-- Greffe rénale -->
+    <a href="greffe.html" class="full-card" style="background-image: url('../photos/dialyse/greffe.png');">
+      <div class="card-overlay">
+        <h3>Greffe rénale</h3>
+        <p>Alternative à la dialyse, elle permet de retrouver une fonction rénale durable avec un rein greffé.</p>
+      </div>
+    </a>
+
+    <!-- traitement conservateur -->
+    <a href="conservateur.html" class="full-card" style="background-image: url('../photos/dialyse/conservateur.webp');">
+      <div class="card-overlay">
+        <h3>Le traitement conservateur</h3>
+        <p>Une prise en charge sans dialyse ni greffe, centrée sur le confort, l’accompagnement et la qualité de vie.</p>
+      </div>
+    </a>
+
+  </section>
+
+  <!-- Script barre de navigation -->
+  <script src="../scripts/barre-navigation.js"></script>
+</body>
+</html>

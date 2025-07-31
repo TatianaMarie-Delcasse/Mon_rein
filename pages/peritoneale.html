@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dialyse peritoneale</title>
+    <link rel="stylesheet" href="../styles/barre-navigation.css">
+    <link rel="stylesheet" href="../styles/hemodialyse.css"> 
+</head>
+
+<body>
+
+    <div class="header-top">
+        <h1>Qu’est ce que la Dialyse Péritonéale ?</h1>
+        <br>
+        <p>Comprenez le rôle de ce traitement et son fonctionnement.</p>
+        <br>
+    </div>
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="content">
+
+        <p class="transition-paragraph">
+            La dialyse péritonéale est un traitement qui permet de filtrer les déchets du sang lorsque les reins ne fonctionnent plus correctement. Elle utilise le péritoine, une fine membrane située dans le ventre, comme filtre naturel.
+            <br><br>
+            Un liquide appelé dialysat est introduit dans l’abdomen. Il reste quelques heures pour absorber les déchets et l’excès d’eau, puis est retiré et remplacé par un liquide neuf.
+            <br><br>
+            Ce traitement se fait à la maison, soit en autonomie après une formation, soit avec l’aide d’une infirmière libérale. 
+        </p>
+
+        <h3>Schéma de la dialyse péritolnéale </h3>
+        <img src="../photos/dialyse/schema_peritoneale.webp" alt="Schéma dialyse peritoneale" class="img-rein" />
+
+        <br><br>
+
+         <p class="transition-paragraph">
+            <strong>Le cathéter et la préparation au traitement</strong>
+            <br><br>
+            Le cathéter est un petit tuyau souple qui permet de faire entrer et sortir le liquide de dialyse (dialysat) dans la cavité péritonéale. Il est posé au bloc opératoire, sous anesthésie.
+            <br><br>
+            Les premiers soins (pansements) et tests de dialyse sont réalisés ensuite en consultation. En général, le traitement commence à domicile environ un mois après la pose du cathéter, le temps que la zone cicatrise correctement.
+            <br><br>
+            Pendant cette période, les bains et douches sont interdits, et un traitement laxatif est souvent prescrit pour assurer un transit rapide, ce qui est important pour le bon déroulement de la dialyse.
+        </p>
+
+        <h3>Comment fonctionne la dialyse péritonéale ?</h3>
+        <p class="transition-paragraph">
+            Le traitement en dialyse péritolnéale se fait suivant des cycles composés de 3 étapes : 
+        </p>
+        <br>
+        <img src="../photos/dialyse/etapes_peritoneale.png" alt="Carte mentale greffe" class="img-rein" />
+        <br><br>
+
+        <h3>DPCA et DPA : deux méthodes selon votre mode de vie</h3>
+        <p class="transition-paragraph">
+            Il existe deux options de dialyse péritonéale, permettant de s’adapter à votre mode de vie et à vos activités quotidiennes :
+        </p>
+
+        <div class="card-container">
+            <div class="access-card" onclick="openModal('modalFAV')">
+                <img src="../photos/dialyse/DPCA.jpg" alt="DPCA" class="card-img">
+                <h4>La dialyse péritonéale continue ambulatoire(DPCA)</h4>
+            </div>
+
+            <div class="access-card" onclick="openModal('modalCatheter')">
+                <img src="../photos/dialyse/DPA.jpeg" alt="DPA" class="card-img">
+                <h4>La dialyse péritonéale automatisée(DPA)</h4>
+            </div>
+        </div>
+
+        <section class="section-trucs">
+            <h3>Informations utiles :</h3>
+            <div class="flip-grid">
+                  <div class="flip-card">
+                        <div class="flip-card-inner activity-border-red-coral">
+                              <div class="flip-card-front">
+                                    Suivi médical en consultation une fois par mois.
+                              </div>
+                              <div class="flip-card-back">
+                                    Apportez votre prise de sang prescrite et votre cahier de dialyse bien rempli pour adapter au mieux votre traitement.
+                                    <br><br>Tous les six mois, un bilan complet permet d’évaluer la qualité de la dialyse, avec un suivi diététique.
+                              </div>
+                        </div>
+                  </div>
+
+                  <div class="flip-card">
+                        <div class="flip-card-inner activity-border-blue-electric">
+                              <div class="flip-card-front">
+                                    Voyages possibles( même à l’étranger), à organiser avec le centre de dialyse
+                              </div>
+                              <div class="flip-card-back">
+                                     Prévenir votre équipe médicale en amont pour organiser la livraison du matériel ou prévoir ce qu’il faut emporter.
+                                    <br><br>Assurez-vous des délais de livraison et veillez à toujours réaliser vos échanges dans de bonnes conditions d’hygiène.
+                              </div>
+                        </div>
+                  </div>
+
+                  <div class="flip-card ">
+                        <div class="flip-card-inner activity-border-green-lime">
+                              <div class="flip-card-front ">
+                                    Une équipe paramédicale joignable 7/7jours 24/24h.
+                              </div>
+                              <div class="flip-card-back">
+                                    Si vous avez besoin d'aide pour effectuer les manipulations, une infirmière libérale peut venir vous aider à votre domicile. 
+                                    <br><br> En cas de problème, vous pouvez téléphoner a tout moment.
+                              </div>
+                        </div>
+                  </div>
+
+                  <div class="flip-card">
+                        <div class="flip-card-inner activity-border-yellow-safran">
+                              <div class="flip-card-front">
+                                    Baignades possibles sous certaines conditions.
+                              </div>
+                              <div class="flip-card-back">
+                                    La baignade peut être envisagée avec l’accord de l’équipe médicale,si le cathéter est bien cicatrisé et dans un environnement propre comme une piscine privée.
+                                    <br><br>Le pansement doit être protégé et changé après la baignade.
+                              </div>
+                        </div>
+                  </div>
+
+                  <div class="flip-card">
+                        <div class="flip-card-inner activity-border-orange-bold">
+                              <div class="flip-card-front">
+                                    Livraison du matériel de dialyse péritonéale une fois par mois.
+                              </div>
+                              <div class="flip-card-back">
+                                    Rangez le materiel par type de poches et date de péremption, dans un endroit sec, propre, entre 0 et 25°C.
+                                    <br><br>Utilisez le réchauffeur fourni, vérifiez régulièrement votre stock, et retournez au centre tout matériel détérioré.
+                              </div>
+                        </div>
+                  </div>
+
+                  <div class="flip-card">
+                        <div class="flip-card-inner activity-border-purple-bright">
+                              <div class="flip-card-front">
+                                    Avoir une hygiène corporelle bien soignée.
+                              </div>
+                              <div class="flip-card-back">
+                                    La douche est possible après cicatrisation, à condition de protéger le pansement avec un film transparent et de le changer ensuite.
+                                    <br><br>Assurez-vous que le lieu de dialyse reste toujours propre.
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </section>
+
+      <br>
+      <h3>Prévention des infections</h3>
+        <br>
+        <img src="../photos/dialyse/prevention_infection.png" alt="Carte mentale greffe" class="img-rein" />
+        <br><br>
+
+        <h3>Que faire en cas de :</h3>
+        
+        <div class="card-container2">
+            <div class="access-card2" onclick="openModal('modaldrainage')">
+                <h4>Difficultés de drainage ou d’injection</h4>
+            </div>
+
+            <div class="access-card2" onclick="openModal('modaltrouble')">
+                <h4>Liquide trouble</h4>
+            </div>
+
+            <div class="access-card2" onclick="openModal('modalrose')">
+                <h4>Liquide rosé</h4>
+            </div>
+
+            <div class="access-card2" onclick="openModal('modalorifice')">
+                <h4>Suspicion d’infection de l’orifice du cathéter (émergence)</h4>
+            </div>
+
+            <div class="access-card2" onclick="openModal('modaldouleur')">
+                <h4>Douleurs en fin de drainage</h4>
+            </div>
+
+            <div class="access-card2" onclick="openModal('modalerreur')">
+                <h4>Erreur de manipulation</h4>
+            </div>
+        </div>
+
+        <br>
+      <h3>Les + et les points de vigilance</h3>
+        <br>
+        <img src="../photos/dialyse/avantages_DP.png" alt="Carte mentale greffe" class="img-rein" />
+
+        <br><br><br><h3>Vous vous sentez prêt à tester vos connaissances ?</h3>
+
+        <a href="jeux2.html" class="teaser-button">Relevez le défi ici !</a>
+
+    </div>
+
+    <script src="../scripts/barre-navigation.js"></script>
+
+
+    <!-- Modale FAV -->
+    <div id="modalFAV" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalFAV')">&times;</span>
+        
+        <h2>La dialyse péritonéale continue ambulatoire(DPCA)</h2>
+
+        <h3>🕒 Fréquence des échanges :</h3>
+        <div class="encadre">
+        <ul>
+            <li>Chaque traitement est appelé un échange.</li>
+            <li>Un échange dure en moyenne 30 minutes.</li>
+            <li>En général, 3 à 4 échanges par jour sont nécessaires, selon vos besoins.</li>
+        </ul>
+        </div>
+
+        <h3>🔌 Connexion au dispositif :</h3>
+        <div class="encadre">
+        <ul>
+            <li>La connexion au dispositif de dialyse ne se fait que pendant l’échange (injection et drainage).</li>
+            <li>Pendant les phases de stase (le temps où le liquide reste dans l’abdomen), vous êtes déconnecté du dispositif.</li>
+            <li>Vous pouvez alors bouger librement et réaliser toutes vos activités habituelles.</li>
+        </ul>
+        </div>
+
+        <h3>🗓️ Organisation de la journée :</h3>
+        <div class="encadre">
+        <ul>
+            <li>Journée : Vous disposez de 4 à 6 heures libres entre chaque échange.</li>
+            <li>Nuit : Il n'y a pas d'échange pendant la nuit.</li>
+        </ul>
+        </div>
+
+        <h3>🏃‍♀️ Vie quotidienne :</h3>
+        <div class="encadre">
+        <p>
+            Le reste du temps, vous pouvez reprendre vos activités habituelles : travail, loisirs, vie sociale…
+        </p>
+        </div>
+
+        <br>
+        <img src="../photos/dialyse/schema_DPCA.png" alt="Schéma fistule artério-veineuse" class="modal-image">
+    </div>
+    </div>
+
+
+        <!-- Modale Cathéter -->
+    <div id="modalCatheter" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalCatheter')">&times;</span>
+        
+        <h2>La dialyse péritonéale automatisée(DPA)</h2>
+
+        <h3>💡 Fonctionnement général :</h3>
+        <div class="encadre">
+        <ul>
+            <li>Une machine appelée "cycleur" est installée près de votre lit.</li>
+            <li>La connexion au cycleur se fait le soir au coucher, et la déconnexion le matin au réveil.</li>
+            <li>La dialyse est réalisée automatiquement la nuit, pendant que vous dormez.</li>
+        </ul>
+        </div>
+
+        <h3>🔁 Gestion des cycles :</h3>
+        <div class="encadre">
+        <ul>
+            <li>Le cycleur effectue automatiquement les différentes étapes de traitement :<br>
+                ➤ Injection du liquide<br>
+                ➤ Stase (pause)<br>
+                ➤ Drainage<br>
+            </li>
+            <li>Ces cycles se répètent tout au long de la nuit sans que vous ayez à intervenir.</li>
+        </ul>
+        </div>
+
+        <h3>📤 Transmission des données :</h3>
+        <div class="encadre">
+        <p>
+            À la fin de chaque traitement, le cycleur transmet automatiquement vos données de dialyse à votre centre de soins.
+        </p>
+        </div>
+
+        <h3>🌞 Vie quotidienne :</h3>
+        <div class="encadre">
+        <p>
+            Vous êtes libre toute la journée pour vos activités habituelles : travail, loisirs, sorties…
+        </p>
+        </div>
+
+        <br>
+        <img src="../photos/dialyse/schema_DPA.png" alt="Schéma cathéter veineux" class="modal-image">
+    </div>
+    </div>
+
+    <!-- Modale FAV -->
+    <div id="modaldrainage" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modaldrainage')">&times;</span>
+        <img src="../photos/dialyse/difficulte_drainage.png" alt="Schéma fistule artério-veineuse" class="modal-image">
+    </div>
+    </div>
+
+
+        <!-- Modale Cathéter -->
+    <div id="modaltrouble" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modaltrouble')">&times;</span>
+        <img src="../photos/dialyse/liquide_trouble.png" alt="Schéma cathéter veineux" class="modal-image">
+    </div>
+    </div>
+
+    <!-- Modale FAV -->
+    <div id="modalrose" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalrose')">&times;</span>
+        <img src="../photos/dialyse/liquide_rose.png" alt="Schéma fistule artério-veineuse" class="modal-image">
+    </div>
+    </div>
+
+
+        <!-- Modale Cathéter -->
+    <div id="modalorifice" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalorifice')">&times;</span>
+        <img src="../photos/dialyse/infection_orifice.png" alt="Schéma cathéter veineux" class="modal-image">
+    </div>
+    </div>
+
+    <!-- Modale FAV -->
+    <div id="modaldouleur" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modaldouleur')">&times;</span>
+        <img src="../photos/dialyse/douleur_drainage.png" alt="Schéma fistule artério-veineuse" class="modal-image">
+    </div>
+    </div>
+
+
+        <!-- Modale Cathéter -->
+    <div id="modalerreur" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalerreur')">&times;</span>
+        <img src="../photos/dialyse/erreur_manip.png" alt="Schéma cathéter veineux" class="modal-image">
+    </div>
+    </div>
+
+
+    <!-- Script pour gérer les modales -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = "block";
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+
+
+</body>
+</html>

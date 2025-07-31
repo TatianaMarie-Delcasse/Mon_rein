@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hémodialyse</title>
+    <link rel="stylesheet" href="../styles/barre-navigation.css">
+    <link rel="stylesheet" href="../styles/hemodialyse.css"> 
+</head>
+
+<body>
+
+    <div class="header-top">
+        <h1>Qu’est-ce que l’hémodialyse ?</h1>
+        <br>
+        <p>Comprenez le rôle de ce traitement et son fonctionnement.</p>
+        <br>
+    </div>
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="content">
+
+        <p class="transition-paragraph">
+            L’hémodialyse est un traitement médical qui remplace les fonctions de filtration des reins défaillants. Elle permet d’éliminer les déchets toxiques et l’excès d’eau dans le sang grâce à une machine de dialyse (appelée générateur), qui agit comme un rein artificiel.
+            En général, ce traitement est réalisé trois fois par semaine, pendant 4 heures, et permet de conserver une qualité de vie.
+        </p>
+
+        <h3>Schéma de l'hémodialyse</h3>
+        <img src="../photos/dialyse/schema_hemodialyse.webp" alt="Schéma de l'hémodialyse" class="img-rein" />
+
+        <br><br>
+
+        <h3>Comment fonctionne l’hémodialyse ?</h3>
+        <p class="transition-paragraph">
+            Le sang est prélevé dans le corps, filtré à travers un rein artificiel, puis réinjecté. Pour cela, il faut un accès permanent à la circulation sanguine, obtenu par l’un des deux moyens suivants :
+        </p>
+
+        <div class="card-container">
+            <div class="access-card" onclick="openModal('modalFAV')">
+                <img src="../photos/dialyse/fistule.jpg" alt="Fistule" class="card-img">
+                <h4>Fistule artério-veineuse (FAV)</h4>
+            </div>
+
+            <div class="access-card" onclick="openModal('modalCatheter')">
+                <img src="../photos/dialyse/catheter.jpg" alt="Cathéter" class="card-img">
+                <h4>Cathéter veineux central</h4>
+            </div>
+        </div>
+
+        <br>
+        <h3>Qu’est-ce que le « poids sec » ?</h3>
+
+        <p class="transition-paragraph">
+            En dialyse, le poids sec correspond au poids idéal du patient après une séance,
+            une fois que tout l’excès d’eau a été retiré. Ce poids est estimé par le néphrologue et adapté à la morphologie du patient.
+            <br>
+            En effet, comme les reins ne produisent plus d’urine, de l’eau s’accumule entre les séances :
+            on parle de surcharge hydrique.
+
+        </p>
+
+        <h4>⚠️ Risques de la surcharge hydrique</h4>
+
+        <div class="card-container">
+            <div class="risk-card">
+                <img src="../photos/dialyse/oedeme.webp" alt="Œdèmes" class="risk-img">
+                <p><strong>Œdèmes</strong><br>(gonflements)</p>
+            </div>
+            <div class="risk-card">
+                <img src="../photos/dialyse/essoufflement.jpg" alt="Essoufflement" class="risk-img">
+                <p><strong>Essoufflement</strong></p>
+            </div>
+            <div class="risk-card">
+                <img src="../photos/dialyse/hypertension.jpg" alt="Hypertension" class="risk-img">
+                <p><strong>Hypertension</strong></p>
+            </div>
+        </div>
+
+        <h4>🎯 Objectif du poids sec</h4>
+        <br>
+        <p class="transition-paragraph">
+                L’objectif est d’atteindre ce poids sec à chaque séance, afin d’éviter les complications liées à l’excès d’eau.
+                Avant et après chaque dialyse, vous serez pesé pour adapter le volume à retirer lors du traitement.
+
+            </p>
+
+           <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/qzk34FF0JxQ" 
+                    title="Vidéo explicative sur l’hémodialyse"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+
+           <section class="section-centre">
+                <h3 style="margin-top: 10px;">Les différentes modalités d'hémodialyse</h3>
+                <div class="grid-item home-page">
+                    <div class="image-container">
+                    <img src="../photos/dialyse/hemodialyse_centre.png" alt="Hémodialyse en centre" class="card-image" />
+                    </div>
+                    <div class="text">
+                    <h3>Hémodialyse en centre</h3>
+                    <ul>
+                        <li>Chaque traitement est appelé une séance de dialyse.</li>
+                        <li>Les séances ont lieu 3 fois par semaine, durant en moyenne 4 heures.</li>
+                        <li>Le transport est pris en charge par la Sécurité sociale.</li>
+                        <li>Le centre favorise le lien social.</li>
+                        <li>En dehors des séances, vous reprenez vos activités habituelles.</li>
+                    </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-domicile">
+                <div class="grid-item home-page reverse">
+                    <div class="image-container">
+                    <img src="../photos/dialyse/hemodialyse_domicile.jpg" alt="Hémodialyse à domicile" class="card-image" />
+                    </div>
+                    <div class="text">
+                    <h3>Hémodialyse à domicile</h3>
+                    <ul>
+                        <li>Les séances sont plus courtes (2 à 3h) mais plus fréquentes (5 à 7 fois par semaine).</li>
+                        <li>Offre une qualité de dialyse optimale.</li>
+                        <li>Une formation spécialisée permet l’autonomie.</li>
+                        <li>Moins de fatigue post-séance, meilleure qualité de vie.</li>
+                        <li>Régime souvent moins contraignant.</li>
+                        <li>Permet de conserver liberté et autonomie.</li>
+                    </ul>
+                    </div>
+                </div>
+            </section>
+
+            <br><br><br><h3>Vous vous sentez prêt à tester vos connaissances ?</h3>
+
+        <a href="jeux2.html" class="teaser-button">Relevez le défi ici !</a>
+
+    </div>
+
+    <script src="../scripts/barre-navigation.js"></script>
+
+
+
+
+    <!-- Modale FAV -->
+    <div id="modalFAV" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalFAV')">&times;</span>
+        
+        <h2>💉 La fistule artério-veineuse (FAV)</h2>
+
+        <div class="encadre">
+        <p>
+            La fistule artério-veineuse est une intervention chirurgicale qui consiste à connecter une
+            artère et une veine de l’avant-bras ou du bras.
+            Cette opération est généralement réalisée sous anesthésie locale.
+        </p>
+        <p>
+            Elle doit être effectuée plusieurs mois avant la mise en dialyse, afin
+            qu’elle soit bien cicatrisée et prête à être utilisée lors des séances.
+        </p>
+        </div>
+
+        <h3>Avant l’intervention</h3>
+        <div class="encadre">
+        <p>
+            Un examen clinique est réalisé pour évaluer la qualité des vaisseaux sanguins et savoir de quel côté la fistule sera crée. Il est complété par une
+            échographie doppler (ou cartographie de fistule) des deux bras pour confirmer
+            leur qualité.
+        </p>
+        </div>
+
+        <h3>Après l’intervention</h3>
+        <div class="encadre">
+        <p>
+            Environ un mois après la création de la fistule, un nouveau doppler est effectuée
+            pour vérifier son bon fonctionnement.
+        </p>
+        </div>
+
+        <h3>Lors des séances de dialyse</h3>
+        <div class="encadre">
+        <ul>
+            <li>Une pommade anesthésiante est appliquée une heure avant la séance sur le bras porteur de la fistule.</li>
+            <li>Deux aiguilles sont utilisées : l’une pour prélever le sang, l’autre pour le réinjecter après filtration.</li>
+        </ul>
+        </div>
+
+        <h3>Pourquoi la FAV est-elle privilégiée ?</h3>
+        <div class="encadre">
+        <ul>
+            <li>Elle présente moins de risques d’infection que les autres accès.</li>
+            <li>Sa durée de vie est plus longue que celle des cathéters.</li>
+        </ul>
+        </div>
+
+        <h3>Schéma du fistule artério-veineuse</h3>
+        <img src="../photos/dialyse/schema_fistule.webp" alt="Schéma fistule artério-veineuse" class="modal-image">
+    </div>
+    </div>
+
+
+        <!-- Modale Cathéter -->
+    <div id="modalCatheter" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modalCatheter')">&times;</span>
+        
+        <h2>💉 Le cathéter veineux central</h2>
+
+        <div class="encadre">
+        <p>
+            Le cathéter d’hémodialyse est un tube souple inséré dans une grosse veine,
+            généralement au niveau du cou (veine jugulaire) ou parfois dans l’aine.
+            Il possède deux branches extériorisées : l’une pour aspirer le sang, l’autre pour le restituer après filtration.
+        </p>
+        </div>
+
+        <h3>Utilisation du cathéter</h3>
+        <div class="encadre">
+        <ul>
+            <li>Si la fistule n’est pas encore utilisable.</li>
+            <li>Si l’état veineux ne permet pas la création d’une fistule.</li>
+            <li>En urgence, si aucune fistule n’est encore disponible.</li>
+        </ul>
+        </div>
+
+        <h3>Mise en place</h3>
+        <div class="encadre">
+        <p>
+            Le cathéter est posé en milieu hospitalier, sous anesthésie locale, par un chirurgien ou un néphrologue.
+            C’est une procédure stérile, nécessitant une surveillance rigoureuse pour limiter les infections.
+        </p>
+        </div>
+
+        <h3>Deux types de cathéters</h3>
+        <div class="encadre">
+        <ul>
+            <li>Court terme : en urgence ou en attente de maturation de la fistule.</li>
+            <li>Long terme : utilisés pendant plusieurs mois, parfois des années.</li>
+        </ul>
+        </div>
+
+        <h3>Décision médicale</h3>
+        <div class="encadre">
+        <p>
+            C’est le néphrologue qui détermine l’indication du cathéter en fonction de la situation clinique du patient.
+        </p>
+        </div>
+
+        <h3>Schéma du cathéter veineux</h3>
+        <img src="../photos/dialyse/schema_catheter.jpg" alt="Schéma cathéter veineux" class="modal-image">
+    </div>
+    </div>
+
+
+    <!-- Script pour gérer les modales -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = "block";
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+    </script>
+    
+
+</body>
+</html>

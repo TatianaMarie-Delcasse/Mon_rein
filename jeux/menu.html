@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jeu Menu Santé Rénale</title>
+  <link rel="stylesheet" href="../styles/menu.css" />
+</head>
+<body>
+
+  <!-- Bouton Retour -->
+  <a href="../pages/jeux2.html" class="back-button">← Retour au parcours</a>
+
+  <!-- Bloc d’introduction -->
+  <div class="intro-wrapper" id="intro-wrapper">
+    <a href="../pages/jeux2.html" class="back-button">← Retour au parcours</a>
+
+    <div class="game-introduction">
+      <h1>Bienvenue dans le jeu du Menu Santé Rénale</h1>
+      <p>
+        Votre mission : choisir les repas les plus adaptés pour une alimentation saine en cas d’insuffisance rénale.
+      </p>
+      <p>
+        Pour chaque restaurant, vous devrez sélectionner une entrée, un plat et un dessert. Des explications vous seront données à la fin de chaque menu.
+      </p>
+      <p>Prêt(e) ? Cliquez ci-dessous pour commencer !</p>
+      <button id="start-menu-btn">Commencer le jeu</button>
+    </div>
+  </div>
+
+<!-- Contenu principal du jeu -->
+<div id="main-content" style="display: none;">
+  <div class="container">
+    <h1>Menu Spécial Insuffisance Rénale</h1>
+
+    <div id="game">
+      
+
+      <p id="instructions"></p>
+      <h2 id="restaurant-type"></h2>
+
+      <div id="menu-questions">
+        <div class="menu-section">
+          <p class="question">Choisis une entrée :</p>
+          <div id="choices-entree" class="choices-group"></div>
+        </div>
+        <div class="menu-section">
+          <p class="question">Choisis un plat :</p>
+          <div id="choices-plat" class="choices-group"></div>
+        </div>
+        <div class="menu-section">
+          <p class="question">Choisis un dessert :</p>
+          <div id="choices-dessert" class="choices-group"></div>
+        </div>
+      </div>
+
+      <button id="validate-btn">Valider mon menu</button>
+    </div>
+
+    
+    <div id="score-screen" class="hidden">
+      <h2>🎉 Fin du jeu !</h2>
+      <p>Score final : <span id="final-score"></span> / <span id="total-score"></span></p>
+      <button onclick="restartGame()">Rejouer</button>
+    </div>
+  </div>
+</div>
+
+  <!--Popup de résultat -->
+  <div id="result-screen" class="hidden">
+    <div class="popup-content">
+      <div id="result-details"></div>
+      <button id="next-btn"></button>
+    </div>
+  </div>
+
+  <!-- Popup final -->
+  <div id="final-popup" class="hidden">
+    <div class="popup-content final-background">
+      <div class="final-text-block">
+        <p id="final-message" class="final-message-text">🎉 Félicitations !</p>
+        <p>Score total : <strong><span id="final-total">0</span> / 10</strong></p>
+      </div>
+      <div class="final-btn-container">
+        <a href="menucorrection.html" id="see-correction-btn">Voir la fiche réflexe</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../scripts/menu.js"></script>
+  <script>
+    // Affiche le jeu après clic sur "Commencer le jeu"
+    document.getElementById('start-menu-btn').addEventListener('click', () => {
+      document.getElementById('intro-wrapper').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Alimentation</title>
+    <link rel="stylesheet" href="../styles/barre-navigation.css">
+    <link rel="stylesheet" href="../styles/alimentation.css">
+</head>
+<body>
+  
+    <div class="header-top">
+        <h1>Alimentation</h1>
+        <br>
+        <p>Apprenez à adapter votre alimentation pour préserver la santé de vos reins.</p>
+        <br>
+    </div>
+    <div id="navbar-placeholder"></div>
+
+
+    <div class="container">
+    <section class="reflexes-section-v2">
+        <h2>Top 3 des bons réflexes pour bien gérer son alimentation</h2>
+        <div class="reflexes-list">
+        
+        <div class="reflex-item left">
+            <div class="number-circle">1</div>
+            <div class="reflex-text">
+            <strong>Réduis le sel</strong><br><br>
+            Ne dépasse pas 6g/jour, évite les plats industriels, et utilise des herbes, épices, citron pour réhausser le goût.
+            </div>
+        </div>
+    
+        <div class="reflex-item right">
+            <div class="number-circle">2</div>
+            <div class="reflex-text">
+            <strong> Gère les protéines intelligemment </strong><br><br>
+            Répartis les apports en protéines sur la journée, en veillant à consommer une source de protéine par jour.            </div>
+        </div>
+    
+    
+        <div class="reflex-item left">
+            <div class="number-circle">3</div>
+            <div class="reflex-text">
+            <strong> Adapte ton hydratation </strong><br><br>
+            Bois 1,5 L d’eau par jour selon tes besoins et les températures. Privilégie l’eau plate plutôt que les eaux gazeuses salées, et pense à boire régulièrement tout au long de la journée pour ne pas te déshydrater.          </div>
+        </div>
+    
+        </div>
+    </section>
+        
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h2>Astuce du jour</h2><br>
+          <p>Survole pour la découvrir !</p>
+        </div>
+        <div class="flip-card-back">
+          <p><strong> 1 source de protéine</strong> et <strong>1 source de sel</strong> maximum par jour.</p>
+          <p class="encouragement">Un petit écart ? Pas de souci !<br>
+          Ajuste simplement ton prochain repas pour garder un bon équilibre alimentaire.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="timeline-title">Comment lire les étiquettes des produits industriels ? <br>Deviens un détective de ton alimentation ! </h2>
+
+    <div class="timeline-container">
+
+      
+      <div class="timeline-line"></div>
+    
+      <div class="timeline-item top">
+        <div class="content">
+          <img src="../photos/page_alimentation/sel.png" alt="Sel" />
+          <div>
+            <h3>Traque le sel</h3>
+            <p>
+              • Cherche <strong>sodium</strong> ou <strong>NaCl</strong> sur l'étiquette.<br>
+              • Multiplie Na par 2,5 pour l'équivalent en sel.<br>
+              • Choisis des produits avec <strong>moins de 0,4 g</strong> de sel pour 100 g.
+            </p>
+          </div>
+        </div>
+        <div class="connector"></div>
+        <div class="icon-loupe"></div>
+      </div>
+    
+      <div class="timeline-item bottom">
+        <div class="content">
+          <img src="../photos/page_alimentation/proteine.png" alt="Protéines" />
+          <div>
+            <h3>Surveille les protéines</h3>
+            <p>
+              • Trop de protéines peuvent fatiguer tes reins.<br>
+              • Si ton médecin te le recommande, privilégie les aliments avec un <strong>taux de protéines modéré</strong>.<br>
+              
+            </p>
+          </div>
+        </div>
+        <div class="connector"></div>
+        <div class="icon-loupe"></div>
+      </div>
+    
+      <div class="timeline-item top">
+        <div class="content">
+          <img src="../photos/page_alimentation/assiette.png" alt="Naturel" />
+          <div>
+            <h3>Privilégie le naturel</h3>
+            <p>
+              • Favorise les <strong>aliments frais</strong>, non transformés et faits maison.<br>
+              • Évite le faux sel et les produits "sans sel", qui sont souvent riches en potassium.
+            </p>
+          </div>
+        </div>
+        <div class="connector"></div>
+        <div class="icon-loupe"></div>
+      </div>
+    
+    </div>
+    
+    
+<div class="rein-facts">
+  <br><p class="transition-paragraph">
+      <strong>Le saviez-vous ?</strong> Le sel a plusieurs noms !<br> Le sel que vous trouvez sur les étiquettes ne s’appelle pas toujours "sel" ! Il peut aussi être mentionné sous le nom chlorure de sodium (NaCl) ou encore sous forme de sodium (Na). 
+      <br>1 g de sodium = 2,5 g de sel ! Alors, ouvrez l'œil en lisant les étiquettes.</p>
+  </p>
+
+  <br><p class="transition-paragraph">
+      <strong>Le saviez-vous ?</strong> Boire seulement de l'eau gazeuse peut être déconseillé pour vos reins ! <br> Certaines eaux gazeuses contiennent beaucoup de sodium, ce qui peut les fatiguer.
+          Privilégiez l’eau plate ou une eau pauvre en sodium (moins de 20 mg/L), et pensez à varier les types d’eau : eau de source, eau minérale, eau gazeuse, ou eau du robinet.
+  </p>
+</div>
+
+        <br><br><br><h3>Vous vous sentez prêt à tester vos connaissances ?</h3>
+
+     <br><a href="jeux2.html" class="teaser-button">Relevez le défi ici !</a>
+
+    <script>
+        document.querySelectorAll('.reflex-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.nextElementSibling.classList.toggle('active');
+        });
+        });
+    </script>
+    
+
+    
+    
+    <script>
+      function toggleConseil(element) {
+        const contenu = element.querySelector('.contenu-carte');
+        contenu.style.display = (contenu.style.display === 'block') ? 'none' : 'block';
+      }
+    </script>    
+    
+    
+
+    <script src="../scripts/barre-navigation.js"></script>
+  </div> 
+</body>
+</html>

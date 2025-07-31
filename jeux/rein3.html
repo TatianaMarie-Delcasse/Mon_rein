@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeu de Liaison - Rein 3</title>
+  <link rel="stylesheet" href="../styles/rein3.css" />
+</head>
+</body>
+<a href="../pages/jeux2.html" class="back-button">← Retour au parcours</a>
+<div id="customModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2>Résultat</h2>
+    <div id="modalText"></div>
+
+    <div class="error-buttons">
+      <button id="prevErrorButton" style="display:none;">← Précédent</button>
+      <button id="nextErrorButton" style="display:none;">Suivant →</button>
+    </div>
+    
+  </div>
+</div>
+
+  <div class="intro-wrapper" id="intro-wrapper">
+    <div class="game-introduction" id="game-introduction">
+      <h1>Bienvenue !</h1>
+      <p>Dans ce jeu, ton objectif est d'apprendre comment fonctionnent les reins et comment prendre soin de ta santé rénale.</p>
+      <p>Relie chaque image à la bonne définition</p>
+      <p>Lis bien les définitions et pense à leur lien avec les images.</p> 
+      <p>Prêt à relever le défi ? C’est parti !</p>
+      <button id="start-liaison-btn">Commencer le jeu</button>
+
+      <a href="../pages/jeux2.html" id="backButton">← Retour au parcours</a>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+    <h1>Jeu de Liaison</h1>
+
+    <div class="game">
+      <!-- Colonne Termes -->
+      <div class="column">
+        <h2>Illustrations</h2>
+        <div class="item part1" data-id="1"><img src="../photos/rein3/test_sanguin.png" alt="Test sanguin"></div>
+        <div class="item part1" data-id="2"><img src="../photos/rein3/suivi_medical.png" alt="Suivi médical"></div>
+        <div class="item part1" data-id="3"><img src="../photos/rein3/rein_uretres.png" alt="Rein"></div>
+        <div class="item part1" data-id="4"><img src="../photos/rein3/tension.png" alt="Tension"></div>
+        <div class="item part1" data-id="5"><img src="../photos/rein3/eau.png" alt="Verre d'eau"></div>
+
+
+        <div class="item part2" data-id="10"><img src="../photos/rein3/tortue.png" alt="Evolution lente"></div>
+        <div class="item part2" data-id="7"><img src="../photos/rein3/DFG.png" alt="DFG"></div>
+        <div class="item part2" data-id="6"><img src="../photos/rein3/urine.png" alt="Bandelette urinaire"></div>
+        <div class="item part2" data-id="9"><img src="../photos/rein3/rein_endommage.png" alt="Rein endommagé"></div>
+        <div class="item part2" data-id="8"><img src="../photos/rein3/soleil.png" alt="Soleil"></div>
+
+        
+        
+      </div>
+
+      <!-- Colonne Définitions -->
+      <div class="column">
+        <h2>Définitions</h2>
+        
+        
+        <div class="item2 part1" data-id="3">Les reins filtrent le sang pour éliminer les toxines.</div>
+        <div class="item2 part1" data-id="4">L’hypertension artérielle est un facteur de risque pour la maladie rénale.</div>
+        <div class="item2 part1" data-id="1">Ce test permet de savoir si les reins vont bien.</div>
+        <div class="item2 part1" data-id="5">Grâce à moi, les reins restent en bonne santé.</div>
+        <div class="item2 part1" data-id="2">Un suivi médical régulier est nécessaire pour maintenir la maladie rénale sous contrôle.</div>
+
+        <div class="item2 part2" data-id="10">La maladie rénale chronique évolue lentement.</div>
+        <div class="item2 part2" data-id="6">La bandelette urinaire peut révéler des anomalies dans les fonctions rénales.</div>
+        <div class="item2 part2" data-id="9">Un rein endommagé filtre moins efficacement le sang.</div>
+        <div class="item2 part2" data-id="7">Le DFG est un indicateur clé de la fonction rénale.</div>
+        <div class="item2 part2" data-id="8">Il aide le rein à synthétiser la vitamine D, essentielle pour la santé.</div>
+        
+        
+      </div>
+    </div>
+
+    
+
+    <button id="nextPart" style="display:none;">→ Partie suivante</button>
+    <button id="checkButton" onclick="checkMatches()" disabled>Vérifier</button>
+
+
+   <!-- Score final -->
+    <div id="scoreFinalDisplay" class="score-final" style="display: none;"></div>
+
+
+    <!-- Button Terminer -->
+    <button id="finishButton" style="display:none;">Voir la fiche réflexe</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="../scripts/rein3.js"></script>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const startBtn = document.getElementById('start-liaison-btn');
+  const introWrapper = document.querySelector('.intro-wrapper');
+  const gameDiv = document.querySelector('.game');
+
+  startBtn.addEventListener('click', () => {
+    // On cache l'intro
+    introWrapper.style.display = 'none';
+    // On affiche la zone de jeu
+    gameDiv.style.display = 'flex';  
+
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const startBtn = document.getElementById('start-liaison-btn');
+    const introWrapper = document.getElementById('intro-wrapper');
+    const container = document.querySelector('.container');
+  
+    startBtn.addEventListener('click', () => {
+      // Cacher l'intro
+      introWrapper.style.display = 'none';
+  
+      // Afficher toute la partie jeu
+      container.style.display = 'block';
+    });
+  });
+
+
+    </script>
+</body>
+</html>
