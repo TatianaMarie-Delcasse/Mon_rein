@@ -2,15 +2,15 @@ const questions = [
   {
     question: "Quel est l’objectif principal du traitement conservateur ?",
     answers: [
-      { text: "Maintenir la qualité de vie sans recours à la dialyse", correct: true, feedback: "✅ Exactement ! Le but est d'accompagner le patient sans recourir à la dialyse." },
+      { text: "Maintenir la qualité de vie sans avoir recours à la dialyse", correct: true, feedback: "✅ Exactement ! Le but est d'accompagner le patient sans recourir à la dialyse." },
       { text: "Remplacer totalement la fonction du rein", correct: false, feedback: "⚠️ Non. Ce traitement ne remplace pas le rein, il accompagne la progression de la maladie." }
     ]
   },
   {
     question: "Tu as moins d’appétit depuis quelques jours. Tu :",
     answers: [
-      { text: "Ne dis rien", correct: false, feedback: "⚠️ Mauvais réflexe. Perte d’appétit peut indiquer une aggravation ou un besoin d’adaptation." },
-      { text: "Le dis à ton médecin ou à la diététicienne", correct: true, feedback: "✅ Bonne initiative ! Cela peut nécessiter une adaptation du suivi." }
+      { text: "Ne dis rien", correct: false, feedback: "⚠️ Mauvais réflexe. Une perte d’appétit peut indiquer une aggravation de ton état et un besoin d’adapter ton traitement." },
+      { text: "informe ton médecin ou la diététicienne", correct: true, feedback: "✅ Bonne initiative ! Cela peut nécessiter un suivi plus régulier et éviter la dénutrition." }
     ]
   },
   {
@@ -21,38 +21,38 @@ const questions = [
     ]
   },
   {
-    question: "Tu prends plusieurs médicaments. Tu :",
+    question: "Tu prends plusieurs médicaments et cela te parait compliqué. Tu :",
     answers: [
-      { text: "Te débrouilles au hasard", correct: false, feedback: "⚠️ Risqué. Une mauvaise prise peut nuire à ton état de santé." },
-      { text: "Demandes une aide pour organiser la prise", correct: true, feedback: "✅ Très bien ! Un pilulier ou un accompagnement peut t’aider à bien les prendre." }
+      { text: "Ne sait pas comment les prendre mais tu fais avec", correct: false, feedback: "⚠️ Risqué. Une mauvaise prise peut nuire à ton état de santé." },
+      { text: "Demandes une aide pour organiser la prise", correct: true, feedback: "✅ Très bien ! Un pilulier ou un accompagnement infirmier peut t’aider à bien les prendre." }
     ]
   },
   {
     question: "Tu as des démangeaisons importantes. Tu :",
     answers: [
-      { text: "Utilises des crèmes sans consulter", correct: false, feedback: "⚠️ Non ! Certaines crèmes peuvent aggraver les choses ou masquer un vrai problème." },
-      { text: "Le signales pour un traitement adapté", correct: true, feedback: "✅ Bonne réaction ! Des solutions existent pour soulager ce symptôme fréquent." }
+      { text: "Ne le signale pas, car tu penses qu'on ne peut rien y faire", correct: false, feedback: "⚠️ Non ! Des solutions existent pour soulager ce symptôme fréquent." },
+      { text: "Le signales pour un traitement adapté", correct: true, feedback: "✅ Bonne réaction ! Tu vas enfin pouvoir être soulagé et retrouver une qualité de vie correcte." }
     ]
   },
   {
-    question: "Que faire si vous avez des difficultés à vous déplacer pour les suivis ?",
+    question: "Que faire si tu as des difficultés à te déplacer pour les suivis médicaux ? Tu :",
     answers: [
-      { text: "Utiliser la téléconsultation quand c’est possible", correct: true, feedback: "✅ Parfait ! Cela permet de continuer à être suivi sans se déplacer." },
-      { text: "Ne plus aller aux rendez-vous", correct: false, feedback: "⚠️ Non. Il est essentiel de rester suivi, même à distance." }
+      { text: "Utilises la téléconsultation quand c’est possible", correct: true, feedback: "✅ Parfait ! Cela permet de continuer à être suivi sans se déplacer." },
+      { text: "Ne vas plus aux rendez-vous", correct: false, feedback: "⚠️ Non. Il est essentiel de rester suivi, même à distance." }
     ]
   },
   {
-    question: "Le traitement conservateur peut inclure un suivi diététique. Pourquoi ?",
+    question: "Le traitement conservateur inclu un suivi diététique. Pourquoi ?",
     answers: [
-      { text: "Pour imposer une diète stricte à tous les patients", correct: false, feedback: "⚠️ Faux. Chaque patient est différent, la diététique est personnalisée." },
+      { text: "Pour imposer une diète stricte à tous les patients", correct: false, feedback: "⚠️ Faux. Il est important de conserver une alimentation équilibrée et adaptée à l'insuffisance rénale et à ses propres besoins.La diététicienne te donnera de bon conseils. " },
       { text: "Pour adapter les apports sans carence", correct: true, feedback: "✅ Exactement ! L’alimentation est ajustée à tes besoins." }
     ]
   },
   {
     question: "Tu as mal mais ne veux pas prendre d’antalgiques. Tu :",
     answers: [
-      { text: "Dis à ton médecin pour trouver une solution", correct: true, feedback: "✅ Bonne attitude ! Il existe des solutions adaptées et sécurisées." },
-      { text: "Endures la douleur", correct: false, feedback: "⚠️ Non. Il ne faut pas vivre avec une douleur non soulagée." }
+      { text: "Le dis à ton médecin pour trouver une solution", correct: true, feedback: "✅ Bonne attitude ! Il existe des traitements adaptés qui peuvent te soulager même en cas d'insuffisance rénale." },
+      { text: "Endures la douleur car on t'a dit que certains anti-inflammatoires etaient contre indiqué et tu ne veux pas te mettre en danger", correct: false, feedback: "⚠️ Non. Il ne faut pas vivre avec une douleur non soulagée, car cela va impacter ton moral et ton quotidien." }
     ]
   },
   {
@@ -66,7 +66,7 @@ const questions = [
     question: "Quelle phrase est juste ?",
     answers: [
       { text: "L’espérance de vie est la seule priorité du traitement conservateur", correct: false, feedback: "⚠️ Non. C’est la qualité de vie qui est au cœur de ce traitement." },
-      { text: "La qualité de vie est privilégiée sur l’espérance de vie", correct: true, feedback: "✅ Exactement. L’objectif est d’accompagner la fin de vie avec confort et respect." }
+      { text: "La qualité de vie est privilégiée sur l’espérance de vie", correct: true, feedback: "✅ Exactement. L’objectif est d’accompagner la personne avec confort, respect et le minimun de symptômes." }
     ]
   }
 
@@ -127,7 +127,7 @@ function handleAnswer(answer) {
     } else {
       endGame();
     }
-  }, 1200);
+  }, 1900);
 }
 
 function endGame() {

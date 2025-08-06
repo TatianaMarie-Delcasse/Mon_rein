@@ -1,16 +1,23 @@
 const questions = [
   {
-    question: "Après la greffe, pourquoi dois-tu prendre tes médicaments tous les jours ?",
+    question: "Après la greffe, dois-tu prendre tes médicaments tous les jours ?",
     answers: [
-      { text: "Pour éviter le rejet du greffon", correct: true, feedback: "✅ Exactement ! Les traitements anti-rejets empêchent ton corps de s’attaquer au rein greffé." },
-      { text: "Pour renforcer tes muscles", correct: false, feedback: "⚠️ Non ! Les médicaments post-greffe n’ont rien à voir avec les muscles." }
+      { text: "oui, car je prends soin de mon greffon", correct: true, feedback: "✅ Exactement ! Les traitements anti-rejets empêchent ton corps de s’attaquer au rein greffé." },
+      { text: "non, pas forcément, je peux sauter un ou deux jours, ça ira", correct: false, feedback: "⚠️ Non ! Les médicaments post-greffe doivent obligatoirement être pris quotidiennement et à heure fixe sinon il y a des riques de rejet." }
     ]
   },
   {
     question: "Après la greffe, tu ressens une forte fièvre. Tu :",
     answers: [
       { text: "Prends un doliprane et attends", correct: false, feedback: "⚠️ Mauvais réflexe. Il faut toujours chercher la cause de la fièvre après une greffe." },
-      { text: "Contactes immédiatement l’équipe médicale", correct: true, feedback: "✅ Bonne réaction ! La fièvre peut être un signe de rejet ou d’infection." }
+      { text: "Contactes immédiatement l’équipe médicale du centre de transplantation", correct: true, feedback: "✅ Bonne réaction ! La fièvre peut être un signe de rejet ou d’infection." }
+    ]
+  },
+  {
+    question: "Après la greffe, tu as de la diarrhée. Tu :",
+    answers: [
+      { text: "attends que ça passe", correct: false, feedback: "⚠️ Mauvais réflexe. Il faut toujours chercher la cause de la diarrhée après une greffe." },
+      { text: "Contactes immédiatement l’équipe médicale du centre de transplantation", correct: true, feedback: "✅ Bonne réaction ! La diarrhée peut être un signe d’infection." }
     ]
   },
   {
@@ -21,9 +28,9 @@ const questions = [
     ]
   },
   {
-    question: "Tu oublies un médicament anti-rejet. Tu :",
+    question: "Tu oublies de prendre ton médicament anti-rejet. Tu :",
     answers: [
-      { text: "Fais comme si de rien n’était", correct: false, feedback: "⚠️ Dangereux ! Un oubli peut suffire à provoquer un rejet." },
+      { text: "Prends une dose supplémentaire la prochaine fois", correct: false, feedback: "⚠️ Dangereux ! Tu risques un surdosage." },
       { text: "En informes ton médecin", correct: true, feedback: "✅ Bravo ! Mieux vaut prévenir pour qu’un ajustement soit fait si besoin." }
     ]
   },
@@ -41,15 +48,9 @@ const questions = [
       { text: "Achètes tes médicaments sur place", correct: false, feedback: "⚠️ Risqué. Les traitements peuvent être différents ou indisponibles." }
     ]
   },
+
   {
-    question: "Tu oublies ton RDV de suivi. Tu :",
-    answers: [
-      { text: "L’annules complètement", correct: false, feedback: "⚠️ Non. Le suivi est indispensable après une greffe." },
-      { text: "Le reprogrammes", correct: true, feedback: "✅ Exact ! Le suivi régulier permet de surveiller le bon fonctionnement du greffon." }
-    ]
-  },
-  {
-    question: "Tu remarques un œdème soudain. Tu :",
+    question: "Tu remarques un œdème soudain au niveau des jambes. Tu :",
     answers: [
       { text: "En parles à ton médecin rapidement", correct: true, feedback: "✅ Oui, cela peut être un signe de problème rénal ou cardiaque." },
       { text: "Attends que ça passe", correct: false, feedback: "⚠️ Attention, l’œdème ne doit jamais être négligé après une greffe." }
@@ -59,7 +60,7 @@ const questions = [
     question: "Tu as des effets secondaires des médicaments. Tu :",
     answers: [
       { text: "Le signales pour ajuster le traitement", correct: true, feedback: "✅ Très bien. Le traitement peut souvent être adapté sans compromettre la greffe." },
-      { text: "Arrêtes seul le médicament", correct: false, feedback: "⚠️ Grave erreur. Arrêter un médicament anti-rejet sans avis médical est dangereux." }
+      { text: "Arrêtes le médicament", correct: false, feedback: "⚠️ Grave erreur. Arrêter un médicament anti-rejet sans avis médical est dangereux." }
     ]
   },
   {
@@ -127,7 +128,7 @@ function handleAnswer(answer) {
     } else {
       endGame();
     }
-  }, 1200);
+  }, 1900);
 }
 
 function endGame() {

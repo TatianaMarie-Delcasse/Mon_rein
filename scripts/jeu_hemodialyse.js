@@ -9,12 +9,12 @@ const questions = [
   {
     question: "Pendant la dialyse, tu ressens une crampe. Que fais-tu ?",
     answers: [
-      { text: "Je demande une pause", correct: false, feedback: "⚠️ Ce n’est pas toujours suffisant, pense à ajuster le débit si possible." },
-      { text: "Je demande à ajuster le débit de la machine", correct: true, feedback: "✅ Bonne réaction ! Un ajustement peut soulager rapidement la crampe." }
+      { text: "J'attend que ca passe, je me masse", correct: false, feedback: "⚠️ Ce n’est pas suffisant, informe l'équipe soignante pour qu'elle puisse te soulager" },
+      { text: "Je préviens le personel soignant", correct: true, feedback: "✅ Bonne réaction ! Un ajustement des paramètres de dialyse va pouvoir être éffectué" }
     ]
   },
   {
-    question: "Tu pars 4 jours à Marseille. Que fais-tu ?",
+    question: "Tu pars 4 jours loin de ton centre. Que fais-tu ?",
     answers: [
       { text: "Je contacte un centre de dialyse sur place", correct: true, feedback: "✅ Exactement ! Mieux vaut prévoir les séances dans un centre à l’avance." },
       { text: "Je pars sans rien organiser", correct: false, feedback: "⚠️ Risqué ! Sans organisation, tu risques de rater une séance." }
@@ -30,43 +30,43 @@ const questions = [
   {
     question: "Ta prise de poids entre deux dialyses est élevée. Que fais-tu ?",
     answers: [
-      { text: "J’ignore, ce n’est pas important", correct: false, feedback: "⚠️ C’est au contraire très important. Une surcharge peut fatiguer ton cœur." },
-      { text: "Je fais attention au sel et aux liquides", correct: true, feedback: "✅ Parfait ! Limiter le sel aide à mieux gérer la prise de poids." }
+      { text: "J'ai peut être trop mangé et trop bu, mais c'est pas grave car je vais dialyser", correct: false, feedback: "⚠️ C’est au contraire très important. Une surcharge peut fatiguer ton cœur." },
+      { text: "J'essaye de limiter le sel et les liquides", correct: true, feedback: "✅ Parfait ! Limiter le sel aide à mieux gérer la prise de poids." }
     ]
   },
   {
     question: "Tu remarques que ta tension est souvent basse en fin de séance. Tu :",
     answers: [
-      { text: "En parles à l’équipe pour ajuster le traitement", correct: true, feedback: "✅ Excellente initiative ! Il est possible d’ajuster le débit ou la durée." },
-      { text: "Bois plus d’eau pour la faire remonter", correct: false, feedback: "⚠️ Attention ! Cela risque d’aggraver le problème à la séance suivante." }
+      { text: "En parles à l’équipe pour ajuster le traitement", correct: true, feedback: "✅ Excellente initiative ! Il est possible d’ajuster ton poids sec et tes traitements." },
+      { text: "Bois plus d’eau pour la faire remonter", correct: false, feedback: "⚠️ Attention ! Cela ne va pas forcément résoudre le problème, le mieux est d'en parler à l'équipe." }
     ]
   },
   {
     question: "Tu as de la fièvre avant une séance. Que fais-tu ?",
     answers: [
-      { text: "Je ne dis rien et j’y vais quand même", correct: false, feedback: "⚠️ Non ! La fièvre peut indiquer un problème à surveiller avant la séance." },
-      { text: "J’en parle à l’équipe avant la dialyse", correct: true, feedback: "✅ C’est essentiel ! La fièvre peut signaler une infection." }
+      { text: "Je ne dis rien j'ai pris du paracetamol, ça va passer", correct: false, feedback: "⚠️ Non ! La fièvre peut indiquer un problème à surveiller avant la séance." },
+      { text: "J’en parle à l’équipe de dialyse", correct: true, feedback: "✅ C’est essentiel ! La fièvre peut signaler une infection." }
     ]
   },
   {
-    question: "Tu oublies un rendez-vous de dialyse. Que fais-tu ?",
+    question: "J'en ai marre des séances, je vais en sauter une pour une fois.",
     answers: [
-      { text: "Je contacte le centre pour reprogrammer", correct: true, feedback: "✅ Bravo ! Il faut toujours rattraper une séance manquée." },
+      { text: "Je contacte le centre pour les prévenir", correct: true, feedback: "✅ Il faut toujours prévenir le centre, j'ai peut être besoin d'en parler." },
       { text: "Je laisse tomber et j’attends la prochaine", correct: false, feedback: "⚠️ Mauvaise idée. Sauter une séance peut être dangereux pour ta santé." }
     ]
   },
   {
-    question: "Un saignement apparaît au point de ponction. Que fais-tu ?",
+    question: "Tu as fini la séance et tu es rentré à la maison, un saignement apparaît au point de ponction. Que fais-tu ?",
     answers: [
-      { text: "Je préviens tout de suite le personnel", correct: true, feedback: "✅ Très bien ! Une prise en charge rapide évite les complications." },
-      { text: "Je mets un mouchoir et je pars", correct: false, feedback: "⚠️ Non ! Le risque de saignement important est réel. Il faut prévenir." }
+      { text: "Je prends des compresses stérile qu'on m'a donné, et je comprimes. Si le saignement ne s'arrête pas, je préviens les services d'urgences", correct: true, feedback: "✅ Très bien ! bien souvent une simple compression de quelques minutes suffit" },
+      { text: "Je laisse couler, je me dis que ça va bien finir par s'arrêter", correct: false, feedback: "⚠️ Non ! Le risque de saignement important est réel. Il faut agir." }
     ]
   },
   {
-    question: "Tu remarques un gonflement au niveau de la fistule. Que fais-tu ?",
+    question: "Tu remarques un gonflement douloureux au niveau de la fistule. Que fais-tu ?",
     answers: [
-      { text: "J’attends de voir si ça passe", correct: false, feedback: "⚠️ Non ! Il vaut mieux réagir tôt pour éviter les complications." },
-      { text: "J’en parle rapidement à l’équipe médicale", correct: true, feedback: "✅ Très bien ! Un gonflement peut signaler un problème vasculaire." }
+      { text: "J’attends la prochaine séance, pour voir si ça passe", correct: false, feedback: "⚠️ Non ! Il vaut mieux réagir tôt pour éviter les complications." },
+      { text: "Une infection ? Un hématome ? je contactes rapidement l'équipe", correct: true, feedback: "✅ Très bien ! Un gonflement peut signaler un problème vasculaire." }
     ]
   }
 
@@ -127,7 +127,7 @@ function handleAnswer(answer) {
     } else {
       endGame();
     }
-  }, 1200);
+  }, 1900);
 }
 
 function endGame() {
